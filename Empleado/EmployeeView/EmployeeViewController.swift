@@ -10,6 +10,7 @@ import UIKit
 class EmployeeViewController: UIViewController {
     
     @IBOutlet weak var photoEmployee: UIImageView!
+    @IBOutlet weak var nameTitle: UILabel!
     @IBOutlet weak var nameEmployee: UILabel!
     @IBOutlet weak var positionTitle: UILabel!
     @IBOutlet weak var positionEmployee: UILabel!

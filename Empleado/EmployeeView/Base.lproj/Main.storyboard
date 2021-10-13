@@ -154,6 +154,7 @@
                         <outlet property="departmentTitle" destination="Q6t-Qq-X5R" id="HY0-eR-UhA"/>
                         <outlet property="generateButton" destination="GzM-RS-rRw" id="qcq-0j-YlW"/>
                         <outlet property="nameEmployee" destination="TIy-Ik-fxe" id="qxk-Jf-ra5"/>
+                        <outlet property="nameTitle" destination="cyP-CZ-Eqa" id="Waz-e2-zDp"/>
                         <outlet property="photoEmployee" destination="n7Z-Oh-c4h" id="2tw-Mr-A5a"/>
                         <outlet property="positionEmployee" destination="6Gu-BO-IFT" id="8zA-r8-LfC"/>
                         <outlet property="positionTitle" destination="BRr-yV-Hs2" id="qgS-pb-RlQ"/>
