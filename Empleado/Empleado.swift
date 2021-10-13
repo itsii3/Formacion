@@ -9,6 +9,7 @@ import UIKit
 
 struct Empleado {
     
+    var foto: String
     var nombre: String
     var cargo: String
     var departamento: String
