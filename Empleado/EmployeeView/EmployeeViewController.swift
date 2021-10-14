@@ -66,7 +66,7 @@ class EmployeeViewController: UIViewController {
     
     @IBAction func generateButtonAction(_ sender: UIButton) {
         
-        let index = Int.random(in: 1..<employeeViewModel.getEmployeesCount())
+        let index = Int.random(in: 0..<employeeViewModel.getEmployeesCount())
         fillEmployeeInfo(with: index)
         
     }
