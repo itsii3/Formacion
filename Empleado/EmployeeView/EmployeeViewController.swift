@@ -20,13 +20,13 @@ class EmployeeViewController: UIViewController {
     @IBOutlet weak var ageEmployee: UILabel!
     @IBOutlet weak var generateButton: UIButton!
     
-    let employeeViewModel = EmployeeViewModel()
+    // let employeeViewModel = EmployeeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        fillEmployeeInfo(with: 0)
+        // fillEmployeeInfo(with: 0)
         
         imageViewLayout(photoEmployee)
         labelLayout(nameEmployee, positionEmployee, departmentEmployee, ageEmployee)
@@ -55,20 +55,20 @@ class EmployeeViewController: UIViewController {
         }
     }
     
-    func fillEmployeeInfo(with index: Int) {
+    func fillEmployeeInfo(with employee: Employee) {
         
-        photoEmployee.image = UIImage(named: employeeViewModel.getEmployeePhoto(of: index))
-        // nameEmployee.text = employeeViewModel.getEmployeeName(of: index)
-        // positionEmployee.text = employeeViewModel.getEmployeePosition(of: index)
-        // departmentEmployee.text = employeeViewModel.getEmployeeDepartment(of: index)
-        // ageEmployee.text = "\(employeeViewModel.getEmployeeAge(of: index))"
+        photoEmployee.image = UIImage(named: employee.name)
+        nameEmployee.text = employee.name
+        positionEmployee.text = employee.position
+        departmentEmployee.text = employee.department
+        ageEmployee.text = "\(employee.age)"
         
     }
     
     @IBAction func generateButtonAction(_ sender: UIButton) {
         
-        let index = Int.random(in: 0..<employeeViewModel.getEmployeesCount())
-        fillEmployeeInfo(with: index)
+        // let index = Int.random(in: 0..<employeeViewModel.getEmployeesCount())
+        // fillEmployeeInfo(with: index)
         
     }
     

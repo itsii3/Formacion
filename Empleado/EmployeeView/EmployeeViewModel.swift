@@ -9,7 +9,7 @@ import UIKit
 
 class EmployeeViewModel {
     
-    let employees = [
+    /* let employees = [
         Employee(name: "Ivet", position: "Becaria", department: "Mobile", age: 22),
         Employee(name: "Rita", position: "iOS Developer", department: "Mobile", age: 26),
         Employee(name: "Sergi", position: "Diseñador", department: "Design", age: 31)
@@ -37,6 +37,6 @@ class EmployeeViewModel {
     
     func getEmployeeAge(of employee: Int) -> Int {
         return employees[employee].age
-    }
+    } */
     
 }

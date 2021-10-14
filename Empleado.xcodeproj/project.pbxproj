@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		373E603D2718776F002439CE /* EmployeeTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E603C2718776F002439CE /* EmployeeTableModel.swift */; };
 		378B0C68271836C900EFEE48 /* EmployeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B0C67271836C900EFEE48 /* EmployeeTableViewController.swift */; };
 		378B0C70271837B100EFEE48 /* EmployeeTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378B0C6F271837B100EFEE48 /* EmployeeTableView.storyboard */; };
 		378B0C7327183F5A00EFEE48 /* EmployeeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B0C7227183F5A00EFEE48 /* EmployeeViewCell.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		373E603C2718776F002439CE /* EmployeeTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableModel.swift; sourceTree = "<group>"; };
 		378B0C67271836C900EFEE48 /* EmployeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewController.swift; sourceTree = "<group>"; };
 		378B0C6F271837B100EFEE48 /* EmployeeTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployeeTableView.storyboard; sourceTree = "<group>"; };
 		378B0C7227183F5A00EFEE48 /* EmployeeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewCell.swift; sourceTree = "<group>"; };
@@ -52,8 +54,9 @@
 		378B0C662718368400EFEE48 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				378B0C67271836C900EFEE48 /* EmployeeTableViewController.swift */,
 				378B0C6F271837B100EFEE48 /* EmployeeTableView.storyboard */,
+				378B0C67271836C900EFEE48 /* EmployeeTableViewController.swift */,
+				373E603C2718776F002439CE /* EmployeeTableModel.swift */,
 				378B0C7227183F5A00EFEE48 /* EmployeeViewCell.swift */,
 				378B0C76271840E800EFEE48 /* EmployeeCellModel.swift */,
 			);
@@ -190,6 +193,7 @@
 			files = (
 				37B50C9427171A1300C26E40 /* Employee.swift in Sources */,
 				378B0C68271836C900EFEE48 /* EmployeeTableViewController.swift in Sources */,
+				373E603D2718776F002439CE /* EmployeeTableModel.swift in Sources */,
 				378B0C7327183F5A00EFEE48 /* EmployeeViewCell.swift in Sources */,
 				378B0C77271840E800EFEE48 /* EmployeeCellModel.swift in Sources */,
 				37B50C822717154300C26E40 /* EmployeeViewController.swift in Sources */,

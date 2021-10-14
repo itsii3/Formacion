@@ -9,26 +9,14 @@ import UIKit
 
 class EmployeeCellModel {
     
-    let employees = [
-        Employee(name: "Ivet", position: "Becaria", department: "Mobile", age: 22),
-        Employee(name: "Rita", position: "iOS Developer", department: "Mobile", age: 26),
-        Employee(name: "Sergi", position: "Diseñador", department: "Design", age: 31)
-    ]
+    var employee: Employee?
     
-    func getEmployeesCount() -> Int {
-        return employees.count
+    func getEmployeeName() -> String {
+        return employee?.name ?? ""
     }
     
-    func getEmployeePhoto(of employee: Int) -> String {
-        return "\(employees[employee].name).jpg"
-    }
-    
-    func getEmployeeName(of employee: Int) -> String {
-        return employees[employee].name
-    }
-    
-    func getEmployeePosition(of employee: Int) -> String {
-        return employees[employee].position
+    func getEmployeePosition() -> String {
+        return employee?.position ?? ""
     }
     
 }

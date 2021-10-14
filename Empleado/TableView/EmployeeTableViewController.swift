@@ -9,7 +9,7 @@ import UIKit
 
 class EmployeeTableViewController: UITableViewController {
     
-    let employeeCellModel = EmployeeCellModel()
+    let employeeTableModel = EmployeeTableModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,10 +19,10 @@ class EmployeeTableViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
             return 1
-        }
+    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return employeeCellModel.getEmployeesCount();
+        return employeeTableModel.getEmployeesCount();
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -30,26 +30,24 @@ class EmployeeTableViewController: UITableViewController {
         let cellIdentifier = "EmployeeViewCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! EmployeeViewCell
         
-        cell.photoEmployee.image = UIImage(named: employeeCellModel.getEmployeePhoto(of: indexPath.row))
-        cell.nameEmployee.text = employeeCellModel.getEmployeeName(of: indexPath.row)
-        cell.positionEmployee.text = employeeCellModel.getEmployeePosition(of: indexPath.row)
+        cell.employee = employeeTableModel.getEmployee(at: indexPath.row)
+        cell.setEmployee()
         
         imageViewLayout(cell.photoEmployee)
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapEmployee(_:)))
-        tapGestureRecognizer.cancelsTouchesInView = false
-        cell.addGestureRecognizer(tapGestureRecognizer)
         
         return cell
         
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let employeeViewController = EmployeeViewController()
-        //employeeViewController.fillEmployeeInfo(with: indexPath.row)
-        performSegue(withIdentifier: "segueToEmployee", sender: nil)
-        
+        if let destinationVC = segue.destination as? EmployeeViewController {
+            if let cell = sender as? EmployeeViewCell {
+                let index = self.tableView.indexPath(for: cell)?.row ?? 0
+                let employee = employeeTableModel.getEmployee(at: index)
+                destinationVC.fillEmployeeInfo(with: employee)
+            }
+        }
     }
     
     func imageViewLayout(_ myImages: UIImageView...) {
@@ -57,12 +55,5 @@ class EmployeeTableViewController: UITableViewController {
             myImage.layer.cornerRadius = myImage.frame.height/2
         }
     }
-    
-    @objc func didTapEmployee(_ sender: UITapGestureRecognizer) {
-        
-        // performSegue(withIdentifier: "segueToEmployee", sender: nil)
-        
-    }
-    
     
 }

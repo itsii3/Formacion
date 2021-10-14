@@ -9,9 +9,20 @@ import UIKit
 
 class EmployeeViewCell: UITableViewCell {
     
+    var employee: Employee?
+    
     @IBOutlet weak var photoEmployee: UIImageView!
     @IBOutlet weak var nameEmployee: UILabel!
     @IBOutlet weak var positionEmployee: UILabel!
+    
+    func setEmployee() {
+        
+        photoEmployee.image = UIImage(named: employee?.name ?? "")
+        nameEmployee.text = employee?.name ?? ""
+        positionEmployee.text = employee?.position ?? ""
+        
+        
+    }
     
     
 }
