@@ -103,6 +103,7 @@
                                             </constraints>
                                         </stackView>
                                     </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="3pJ-TS-KrH" secondAttribute="bottom" id="2GV-Yu-ddU"/>
                                         <constraint firstItem="3pJ-TS-KrH" firstAttribute="top" secondItem="SXo-eC-Ubl" secondAttribute="top" id="Ifl-qT-Tgv"/>
@@ -110,13 +111,16 @@
                                         <constraint firstAttribute="trailing" secondItem="3pJ-TS-KrH" secondAttribute="trailing" constant="25" id="bO7-3D-aeg"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <bool key="isElement" value="YES"/>
                                 </accessibility>
+                                <gestureRecognizers/>
                                 <connections>
                                     <outlet property="nameEmployee" destination="vXZ-ZR-zfC" id="CAR-e6-2FI"/>
                                     <outlet property="photoEmployee" destination="3Oe-aR-SKA" id="Tg4-0Z-pbj"/>
                                     <outlet property="positionEmployee" destination="d62-6y-GcQ" id="0Pt-6j-4iS"/>
+                                    <segue destination="MG5-Z9-TT3" kind="show" identifier="segueToEmployee" id="IzM-J9-VO0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -130,6 +134,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUT-sK-n8F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="400.00000000000006" y="-14.0625"/>
+        </scene>
+        <!--EmployeeViewController-->
+        <scene sceneID="NwO-ij-Ocj">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Employee" referencedIdentifier="EmployeeViewController" id="MG5-Z9-TT3" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="GUT-NF-Y4t"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jyw-xB-rKz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1123" y="-14"/>
         </scene>
     </scenes>
     <resources>

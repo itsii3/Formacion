@@ -36,7 +36,19 @@ class EmployeeTableViewController: UITableViewController {
         
         imageViewLayout(cell.photoEmployee)
         
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(didTapEmployee(_:)))
+        tapGestureRecognizer.cancelsTouchesInView = false
+        cell.addGestureRecognizer(tapGestureRecognizer)
+        
         return cell
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let employeeViewController = EmployeeViewController()
+        //employeeViewController.fillEmployeeInfo(with: indexPath.row)
+        performSegue(withIdentifier: "segueToEmployee", sender: nil)
         
     }
     
@@ -44,6 +56,12 @@ class EmployeeTableViewController: UITableViewController {
         for myImage in myImages {
             myImage.layer.cornerRadius = myImage.frame.height/2
         }
+    }
+    
+    @objc func didTapEmployee(_ sender: UITapGestureRecognizer) {
+        
+        // performSegue(withIdentifier: "segueToEmployee", sender: nil)
+        
     }
     
     

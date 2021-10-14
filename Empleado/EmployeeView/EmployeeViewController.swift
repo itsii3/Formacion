@@ -32,6 +32,7 @@ class EmployeeViewController: UIViewController {
         labelLayout(nameEmployee, positionEmployee, departmentEmployee, ageEmployee)
         buttonLayout(generateButton)
         
+        generateButton.isEnabled = false
         
     }
 
@@ -57,10 +58,10 @@ class EmployeeViewController: UIViewController {
     func fillEmployeeInfo(with index: Int) {
         
         photoEmployee.image = UIImage(named: employeeViewModel.getEmployeePhoto(of: index))
-        nameEmployee.text = employeeViewModel.getEmployeeName(of: index)
-        positionEmployee.text = employeeViewModel.getEmployeePosition(of: index)
-        departmentEmployee.text = employeeViewModel.getEmployeeDepartment(of: index)
-        ageEmployee.text = "\(employeeViewModel.getEmployeeAge(of: index))"
+        // nameEmployee.text = employeeViewModel.getEmployeeName(of: index)
+        // positionEmployee.text = employeeViewModel.getEmployeePosition(of: index)
+        // departmentEmployee.text = employeeViewModel.getEmployeeDepartment(of: index)
+        // ageEmployee.text = "\(employeeViewModel.getEmployeeAge(of: index))"
         
     }
     
