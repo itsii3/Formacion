@@ -9,9 +9,9 @@ import UIKit
 
 struct Employee {
     
-    var name: String
-    var position: String
-    var department: String
-    var age: Int
+    var name: String = ""
+    var position: String = ""
+    var department: String = ""
+    var age: Int = 0
     
 }

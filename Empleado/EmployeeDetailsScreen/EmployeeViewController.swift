@@ -22,11 +22,13 @@ class EmployeeViewController: UIViewController {
     
     // let employeeViewModel = EmployeeViewModel()
     
+    var employee: Employee = Employee()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        // fillEmployeeInfo(with: 0)
+        fillEmployeeInfo2(with: employee)
         
         imageViewLayout(photoEmployee)
         labelLayout(nameEmployee, positionEmployee, departmentEmployee, ageEmployee)
@@ -55,13 +57,19 @@ class EmployeeViewController: UIViewController {
         }
     }
     
-    func fillEmployeeInfo(with employee: Employee) {
+    func fillEmployeeInfo2(with employee: Employee) {
         
         photoEmployee.image = UIImage(named: employee.name)
         nameEmployee.text = employee.name
         positionEmployee.text = employee.position
         departmentEmployee.text = employee.department
         ageEmployee.text = "\(employee.age)"
+        
+    }
+    
+    func fillEmployeeInfo(with newEmployee: Employee) {
+        
+        employee = newEmployee
         
     }
     
