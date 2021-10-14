@@ -51,7 +51,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		378B0C662718368400EFEE48 /* TableView */ = {
+		378B0C662718368400EFEE48 /* EmployeesScreen */ = {
 			isa = PBXGroup;
 			children = (
 				378B0C6F271837B100EFEE48 /* EmployeeTableView.storyboard */,
@@ -60,7 +60,7 @@
 				378B0C7227183F5A00EFEE48 /* EmployeeViewCell.swift */,
 				378B0C76271840E800EFEE48 /* EmployeeCellModel.swift */,
 			);
-			path = TableView;
+			path = EmployeesScreen;
 			sourceTree = "<group>";
 		};
 		37B50C712717154300C26E40 = {
@@ -83,8 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				37B50C992717337600C26E40 /* Common */,
-				378B0C662718368400EFEE48 /* TableView */,
-				37B50C982717335C00C26E40 /* EmployeeView */,
+				378B0C662718368400EFEE48 /* EmployeesScreen */,
+				37B50C982717335C00C26E40 /* EmployeeDetailsScreen */,
 				37B50C7D2717154300C26E40 /* AppDelegate.swift */,
 				37B50C7F2717154300C26E40 /* SceneDelegate.swift */,
 				37B50C862717154400C26E40 /* Assets.xcassets */,
@@ -94,14 +94,14 @@
 			path = Empleado;
 			sourceTree = "<group>";
 		};
-		37B50C982717335C00C26E40 /* EmployeeView */ = {
+		37B50C982717335C00C26E40 /* EmployeeDetailsScreen */ = {
 			isa = PBXGroup;
 			children = (
 				37B50C9C271733E500C26E40 /* EmployeeViewModel.swift */,
 				37B50C812717154300C26E40 /* EmployeeViewController.swift */,
 				37B50C832717154300C26E40 /* Employee.storyboard */,
 			);
-			path = EmployeeView;
+			path = EmployeeDetailsScreen;
 			sourceTree = "<group>";
 		};
 		37B50C992717337600C26E40 /* Common */ = {

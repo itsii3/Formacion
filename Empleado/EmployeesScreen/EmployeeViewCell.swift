@@ -17,6 +17,7 @@ class EmployeeViewCell: UITableViewCell {
     
     func setEmployee() {
         
+        photoEmployee.layer.cornerRadius = photoEmployee.frame.height/2
         photoEmployee.image = UIImage(named: employee?.name ?? "")
         nameEmployee.text = employee?.name ?? ""
         positionEmployee.text = employee?.position ?? ""

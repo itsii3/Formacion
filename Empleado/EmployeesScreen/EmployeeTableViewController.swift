@@ -9,6 +9,8 @@ import UIKit
 
 class EmployeeTableViewController: UITableViewController {
     
+    private let cellIdentifier = "EmployeeViewCell"
+    
     let employeeTableModel = EmployeeTableModel()
     
     override func viewDidLoad() {
@@ -27,14 +29,13 @@ class EmployeeTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cellIdentifier = "EmployeeViewCell"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! EmployeeViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? EmployeeViewCell else {
+            return UITableViewCell()
+        }
         
         cell.employee = employeeTableModel.getEmployee(at: indexPath.row)
         cell.setEmployee()
-        
-        imageViewLayout(cell.photoEmployee)
-        
+            
         return cell
         
     }
@@ -47,12 +48,6 @@ class EmployeeTableViewController: UITableViewController {
                 let employee = employeeTableModel.getEmployee(at: index)
                 destinationVC.fillEmployeeInfo(with: employee)
             }
-        }
-    }
-    
-    func imageViewLayout(_ myImages: UIImageView...) {
-        for myImage in myImages {
-            myImage.layer.cornerRadius = myImage.frame.height/2
         }
     }
     
