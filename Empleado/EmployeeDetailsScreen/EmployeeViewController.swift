@@ -19,16 +19,14 @@ class EmployeeViewController: UIViewController {
     @IBOutlet weak var ageTitle: UILabel!
     @IBOutlet weak var ageEmployee: UILabel!
     @IBOutlet weak var generateButton: UIButton!
-    
-    // let employeeViewModel = EmployeeViewModel()
-    
+        
     var employee: Employee = Employee()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        fillEmployeeInfo2(with: employee)
+        getEmployeeInfo(with: employee)
         
         imageViewLayout(photoEmployee)
         labelLayout(nameEmployee, positionEmployee, departmentEmployee, ageEmployee)
@@ -57,19 +55,17 @@ class EmployeeViewController: UIViewController {
         }
     }
     
-    func fillEmployeeInfo2(with employee: Employee) {
+    func getEmployeeInfo(with newEmployee: Employee) {
+        employee = newEmployee
+    }
+    
+    func fillEmployeeInfo(with employee: Employee) {
         
         photoEmployee.image = UIImage(named: employee.name)
         nameEmployee.text = employee.name
         positionEmployee.text = employee.position
         departmentEmployee.text = employee.department
         ageEmployee.text = "\(employee.age)"
-        
-    }
-    
-    func fillEmployeeInfo(with newEmployee: Employee) {
-        
-        employee = newEmployee
         
     }
     
