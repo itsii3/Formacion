@@ -36,7 +36,7 @@ class EmployeeTableViewController: UITableViewController {
         }
         
         cell.employee = employeeTableModel.getEmployee(at: indexPath.row)
-        cell.setEmployee()
+        cell.setCellWithEmployeeInfo()
             
         return cell
         

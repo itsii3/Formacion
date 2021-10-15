@@ -20,7 +20,11 @@ class EmployeeTableModel {
     }
     
     func getEmployee(at index: Int) -> Employee {
-        return employees[index]
+        if index < employees.count {
+            return employees[index]
+        } else {
+            return Employee(name: "", position: "", department: "", age: 0)
+        }
     }
     
 }
