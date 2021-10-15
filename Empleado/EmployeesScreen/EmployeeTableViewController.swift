@@ -62,7 +62,7 @@ class EmployeeTableViewController: UITableViewController {
             if let cell = sender as? EmployeeViewCell {
                 let index = self.tableView.indexPath(for: cell)?.row ?? 0
                 let employee = employeeTableModel.getEmployee(at: index)
-                destinationVC.fillEmployeeInfo(with: employee)
+                destinationVC.getEmployeeInfo(with: employee)
             }
         }
     }

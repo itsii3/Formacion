@@ -122,7 +122,7 @@
                                     <outlet property="nameEmployee" destination="vXZ-ZR-zfC" id="CAR-e6-2FI"/>
                                     <outlet property="photoEmployee" destination="3Oe-aR-SKA" id="Tg4-0Z-pbj"/>
                                     <outlet property="positionEmployee" destination="d62-6y-GcQ" id="0Pt-6j-4iS"/>
-                                    <segue destination="MG5-Z9-TT3" kind="show" identifier="segueToEmployee" id="IzM-J9-VO0"/>
+                                    <segue destination="MG5-Z9-TT3" kind="showDetail" identifier="segueToEmployee" id="IzM-J9-VO0"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

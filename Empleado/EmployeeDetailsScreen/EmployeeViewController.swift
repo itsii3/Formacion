@@ -26,7 +26,7 @@ class EmployeeViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        getEmployeeInfo(with: employee)
+        fillEmployeeInfo(with: employee)
         
         imageViewLayout(photoEmployee)
         labelLayout(nameEmployee, positionEmployee, departmentEmployee, ageEmployee)
