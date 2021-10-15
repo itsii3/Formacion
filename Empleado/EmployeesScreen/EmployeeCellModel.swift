@@ -9,14 +9,14 @@ import UIKit
 
 class EmployeeCellModel {
     
-    var employee: Employee?
+    var employee: Employee = Employee(name: "", position: "", department: "", age: 0)
     
     func getEmployeeName() -> String {
-        return employee?.name ?? ""
+        return employee.name
     }
     
     func getEmployeePosition() -> String {
-        return employee?.position ?? ""
+        return employee.position
     }
     
 }

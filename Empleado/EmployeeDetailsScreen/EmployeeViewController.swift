@@ -36,22 +36,22 @@ class EmployeeViewController: UIViewController {
         
     }
 
-    func imageViewLayout(_ myImages: UIImageView...) {
-        for myImage in myImages {
-            myImage.layer.cornerRadius = myImage.frame.height/2
+    func imageViewLayout(_ images: UIImageView...) {
+        for image in images {
+            image.layer.cornerRadius = image.frame.height/2
         }
     }
     
-    func labelLayout(_ myLabels: UILabel...) {
-        for myLabel in myLabels {
-            myLabel.layer.borderWidth = 0.5
-            myLabel.layer.cornerRadius = 7
+    func labelLayout(_ labels: UILabel...) {
+        for label in labels {
+            label.layer.borderWidth = 0.5
+            label.layer.cornerRadius = 7
         }
     }
     
-    func buttonLayout(_ myButtons: UIButton...) {
-        for myButton in myButtons {
-            myButton.layer.cornerRadius = 5
+    func buttonLayout(_ buttons: UIButton...) {
+        for button in buttons {
+            button.layer.cornerRadius = 5
         }
     }
     
