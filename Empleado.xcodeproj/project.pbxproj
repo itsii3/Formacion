@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		373E603D2718776F002439CE /* EmployeeTableModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373E603C2718776F002439CE /* EmployeeTableModel.swift */; };
+		37417D9B2719732500523379 /* CustomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37417D9A2719732500523379 /* CustomHeader.swift */; };
 		378B0C68271836C900EFEE48 /* EmployeeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B0C67271836C900EFEE48 /* EmployeeTableViewController.swift */; };
 		378B0C70271837B100EFEE48 /* EmployeeTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 378B0C6F271837B100EFEE48 /* EmployeeTableView.storyboard */; };
 		378B0C7327183F5A00EFEE48 /* EmployeeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 378B0C7227183F5A00EFEE48 /* EmployeeViewCell.swift */; };
@@ -24,6 +25,7 @@
 
 /* Begin PBXFileReference section */
 		373E603C2718776F002439CE /* EmployeeTableModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableModel.swift; sourceTree = "<group>"; };
+		37417D9A2719732500523379 /* CustomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeader.swift; sourceTree = "<group>"; };
 		378B0C67271836C900EFEE48 /* EmployeeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeTableViewController.swift; sourceTree = "<group>"; };
 		378B0C6F271837B100EFEE48 /* EmployeeTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = EmployeeTableView.storyboard; sourceTree = "<group>"; };
 		378B0C7227183F5A00EFEE48 /* EmployeeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewCell.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				37B50C9327171A1300C26E40 /* Employee.swift */,
+				37417D9A2719732500523379 /* CustomHeader.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				37B50C7E2717154300C26E40 /* AppDelegate.swift in Sources */,
 				37B50C9D271733E500C26E40 /* EmployeeViewModel.swift in Sources */,
 				37B50C802717154300C26E40 /* SceneDelegate.swift in Sources */,
+				37417D9B2719732500523379 /* CustomHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

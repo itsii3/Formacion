@@ -17,6 +17,8 @@ class EmployeeTableViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        tableView.register(CustomHeader.self, forHeaderFooterViewReuseIdentifier: "employeeHeader")
+        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -37,6 +39,20 @@ class EmployeeTableViewController: UITableViewController {
         cell.setEmployee()
             
         return cell
+        
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 100
+    }
+    
+    override func tableView(_ tableView: UITableView,
+            viewForHeaderInSection section: Int) -> UIView? {
+        guard let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "employeeHeader") as? CustomHeader else {
+        return UIView()
+        }
+        view.title.text = "Employee List"
+        return view
         
     }
     
