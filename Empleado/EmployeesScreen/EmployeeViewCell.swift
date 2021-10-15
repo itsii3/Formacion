@@ -20,7 +20,6 @@ class EmployeeViewCell: UITableViewCell {
         photoEmployee.image = UIImage(named: employee?.name ?? "")
         nameEmployee.text = employee?.name ?? ""
         positionEmployee.text = employee?.position ?? ""
-        
     }
     
     
