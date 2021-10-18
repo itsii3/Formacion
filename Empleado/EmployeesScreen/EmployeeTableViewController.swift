@@ -17,8 +17,6 @@ class EmployeeTableViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        tableView.register(CustomHeader.self, forHeaderFooterViewReuseIdentifier: "employeeHeader")
-        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -35,24 +33,16 @@ class EmployeeTableViewController: UITableViewController {
             return UITableViewCell()
         }
         
-        cell.employee = employeeTableModel.getEmployee(at: indexPath.row)
-        cell.setCellWithEmployeeInfo()
+        guard let employee = employeeTableModel.getEmployee(at: indexPath.row)
+        else {
+            cell.employee = Employee(name: "", position: "", department: "", age: 0)
+            cell.configureCell()
+            return cell
+        }
+        cell.employee = employee
+        cell.configureCell()
             
         return cell
-        
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 100
-    }
-    
-    override func tableView(_ tableView: UITableView,
-            viewForHeaderInSection section: Int) -> UIView? {
-        guard let view = tableView.dequeueReusableHeaderFooterView(withIdentifier: "employeeHeader") as? CustomHeader else {
-        return UIView()
-        }
-        view.title.text = "Employee List"
-        return view
         
     }
     
@@ -61,7 +51,10 @@ class EmployeeTableViewController: UITableViewController {
         if let destinationVC = segue.destination as? EmployeeViewController {
             if let cell = sender as? EmployeeViewCell {
                 let index = self.tableView.indexPath(for: cell)?.row ?? 0
-                let employee = employeeTableModel.getEmployee(at: index)
+                guard let employee = employeeTableModel.getEmployee(at: index) else {
+                    destinationVC.getEmployeeInfo(with: Employee(name: "", position: "", department: "", age: 0))
+                    return
+                }
                 destinationVC.getEmployeeInfo(with: employee)
             }
         }

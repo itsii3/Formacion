@@ -15,7 +15,7 @@ class EmployeeViewCell: UITableViewCell {
     @IBOutlet weak var nameEmployee: UILabel!
     @IBOutlet weak var positionEmployee: UILabel!
     
-    func setCellWithEmployeeInfo() {
+    func configureCell() {
         photoEmployee.layer.cornerRadius = photoEmployee.frame.width/2
         photoEmployee.image = UIImage(named: employee?.name ?? "")
         nameEmployee.text = employee?.name ?? ""

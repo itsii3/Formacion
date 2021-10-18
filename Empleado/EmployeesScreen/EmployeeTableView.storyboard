@@ -17,9 +17,30 @@
                         <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="separatorColor" systemColor="labelColor"/>
                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="Gx7-YP-Obt">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee List" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dlr-WA-R1X">
+                                    <rect key="frame" x="5" y="30" width="409" height="40"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="40" id="daf-qc-W7T"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="dlr-WA-R1X" secondAttribute="bottom" constant="10" id="3EC-oY-XKI"/>
+                                <constraint firstAttribute="trailing" secondItem="dlr-WA-R1X" secondAttribute="trailing" id="nbh-Xd-Sa1"/>
+                                <constraint firstItem="dlr-WA-R1X" firstAttribute="leading" secondItem="Gx7-YP-Obt" secondAttribute="leading" constant="5" id="qBZ-D0-tuK"/>
+                            </constraints>
+                        </view>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmployeeViewCell" rowHeight="120" id="APe-fY-13u" customClass="EmployeeViewCell" customModule="Empleado" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.5" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="135.5" width="414" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="APe-fY-13u" id="SXo-eC-Ubl">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
